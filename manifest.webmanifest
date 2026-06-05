@@ -1,0 +1,25 @@
+{
+  "name": "تحدي كأس العالم 2026",
+  "short_name": "تحدي كأس العالم 2026",
+  "description": "تحدي توقعات كأس العالم للشباب والديوانية",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FFF1E5",
+  "theme_color": "#FFF1E5",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
