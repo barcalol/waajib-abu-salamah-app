@@ -18,11 +18,14 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  if (!event.request.url.startsWith("http")) return;
   event.respondWith(
     fetch(event.request)
       .then((response) => {
         const copy = response.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+        caches.open(CACHE_NAME)
+          .then((cache) => cache.put(event.request, copy))
+          .catch(() => {});
         return response;
       })
       .catch(() => caches.match(event.request).then((cached) => cached || caches.match(BASE_PATH)))
