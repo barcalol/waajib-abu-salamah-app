@@ -1,6 +1,12 @@
-const CACHE_NAME = "waajib-abu-salamah-v6";
+const CACHE_NAME = "waajib-abu-salamah-v7";
 const BASE_PATH = new URL(self.registration.scope).pathname;
-const SHELL = [BASE_PATH, `${BASE_PATH}scoring.html`, `${BASE_PATH}manifest.webmanifest`, `${BASE_PATH}icons/icon.svg`];
+const SHELL = [
+  BASE_PATH,
+  `${BASE_PATH}leaderboard.html`,
+  `${BASE_PATH}scoring.html`,
+  `${BASE_PATH}manifest.webmanifest`,
+  `${BASE_PATH}icons/icon.svg`
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL)));
