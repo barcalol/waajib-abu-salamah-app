@@ -1,4 +1,4 @@
-const CACHE_NAME = "waajib-abu-salamah-v12";
+const CACHE_NAME = "waajib-abu-salamah-v13";
 const BASE_PATH = new URL(self.registration.scope).pathname;
 const SHELL = [
   BASE_PATH,
